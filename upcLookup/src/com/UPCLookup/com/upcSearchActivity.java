@@ -32,8 +32,8 @@ public class upcSearchActivity extends Activity {
                 	//get the value from the input
                 	String upc = mEdit.getText().toString();
                 	//set up the intent, params include the current activity and the next activity
-                	Intent intent = new Intent(upcSearchActivity.this, UpcLookupActivity.class);
-                	startActivity(intent);
+                	Intent intent = new Intent(view.getContext(), UpcLookupActivity.class);
+                	//startActivity(intent);
                 	//in order toe send data form the input field we add it to the intent
                 	//Intent.putExtra(String Name,String Value)
                 	intent.putExtra("upc", upc);
@@ -41,7 +41,7 @@ public class upcSearchActivity extends Activity {
                 	final int result = 1;
                 	startActivityForResult(intent, result);
                     //Log.v("EditText", mEdit.getText().toString());
-                	//setResult(RESULT_OK, intent);
+                	setResult(RESULT_OK, intent);
                     //finish();
                 }
             });

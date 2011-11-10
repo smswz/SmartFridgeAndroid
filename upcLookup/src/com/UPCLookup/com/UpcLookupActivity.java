@@ -50,7 +50,7 @@ public class UpcLookupActivity extends Activity {
         		productName = "Product not found";
         	}else {
         		JSONObject product = new JSONObject(object.getString("0"));
-        		productName = product.getString("productname");
+        		productName = getProductDetails(product.getString("productname"), 0);
         	}
         	
         	TextView pname = new TextView(this);
@@ -67,5 +67,17 @@ public class UpcLookupActivity extends Activity {
 		}
         
         //Log.println(INFO,TAG, str); 
+    }
+    public String getProductDetails(String str, int index) {
+    	
+    	String[] temp = str.split(",");
+    	return temp[index];
+    	
+    }
+    public String[] getProductDetails(String str) {
+    	
+    	String[] temp = str.split(",");
+    	return temp;
+    	
     }
 }
