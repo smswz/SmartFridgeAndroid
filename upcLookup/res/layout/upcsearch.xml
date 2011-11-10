@@ -11,6 +11,7 @@
     	android:inputType="number"
         android:layout_width="fill_parent"
         android:maxLength="13"
+        android:layout_marginTop="30px"
         android:layout_height="wrap_content"/>
 
     <Button

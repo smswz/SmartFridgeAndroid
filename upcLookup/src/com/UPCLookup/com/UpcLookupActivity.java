@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.widget.TextView;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -13,8 +15,8 @@ import org.json.JSONTokener;
 
 public class UpcLookupActivity extends Activity {
 	
-	//private static final String TAG = "MyActivity";
-	//private static final int INFO = 4;
+	private static final String TAG = "MyActivity";
+	private static final int INFO = 4;
 	
 	private static final String base_url = "http://www.searchupc.com/handlers/upcsearch.ashx?request_type=3&access_token=2C7851AA-DF85-4B0E-AF2A-6CDDCF503159&upc=";
     /** Called when the activity is first created. */
@@ -41,10 +43,16 @@ public class UpcLookupActivity extends Activity {
         try {
         	
         	JSONObject object = (JSONObject) new JSONTokener(str).nextValue();
-        	JSONObject product = new JSONObject(object.getString("0"));
         	
-        	String productName = product.getString("productname");
-        			
+        	String productName = "";
+        	
+        	if(object.length() == 0 ){
+        		productName = "Product not found";
+        	}else {
+        		JSONObject product = new JSONObject(object.getString("0"));
+        		productName = product.getString("productname");
+        	}
+        	
         	TextView pname = new TextView(this);
         	pname.setText(productName);            
         	/*
@@ -57,13 +65,7 @@ public class UpcLookupActivity extends Activity {
 		} catch (JSONException e) {
 			Log.getStackTraceString(e);
 		}
-
-        /*
-        TextView tv = new TextView(this);
-        tv.setText(str);
-        setContentView(tv);*/
         
-        //Log.println(INFO,TAG, str);
-        
+        //Log.println(INFO,TAG, str); 
     }
 }
