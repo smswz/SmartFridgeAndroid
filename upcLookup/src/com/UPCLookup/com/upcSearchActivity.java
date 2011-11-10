@@ -41,8 +41,8 @@ public class upcSearchActivity extends Activity {
                 	final int result = 1;
                 	startActivityForResult(intent, result);
                     //Log.v("EditText", mEdit.getText().toString());
-                	setResult(RESULT_OK, intent);
-                    finish();
+                	//setResult(RESULT_OK, intent);
+                    //finish();
                 }
             });
     }

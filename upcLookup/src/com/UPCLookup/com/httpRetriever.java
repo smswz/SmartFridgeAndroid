@@ -11,13 +11,10 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-
 import android.util.Log;
 
-public class httpRetriever {
 
-	//String url = "http://www.searchupc.com/handlers/upcsearch.ashx?request_type=1&access_token=2C7851AA-DF85-4B0E-AF2A-6CDDCF503159&upc=0124100440801";
-	
+public class httpRetriever {
 	
 	public String callWebService(String serviceURL)
 	{
@@ -46,7 +43,7 @@ public class httpRetriever {
 			   Log.e("IO exception", e.toString());
 		   }
 		   try {
-			   in=new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+			   in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 		   } catch (IllegalStateException e) {
 			   Log.e("IllegalStateException", e.toString());
 		   } catch (IOException e) {
