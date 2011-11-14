@@ -1,4 +1,4 @@
-package com.UPCLookup.com;
+package edu.gatech.smartfridge;
 
 import java.io.BufferedReader;
 import java.io.IOException;

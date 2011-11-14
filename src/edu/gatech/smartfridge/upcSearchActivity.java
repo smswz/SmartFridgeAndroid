@@ -1,4 +1,6 @@
-package com.UPCLookup.com;
+package edu.gatech.smartfridge;
+
+import com.UPCLookup.com.R;
 
 import android.app.Activity;
 import android.content.Intent;

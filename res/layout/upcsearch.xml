@@ -14,12 +14,25 @@
         android:layout_marginTop="30px"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/findItem"
+    <LinearLayout
+        android:id="@+id/buttonLayout"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150px"
-        android:layout_marginTop="30px"
-        android:text="Find Item" />
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/scanItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Scan Barcode" />
+
+        <Button
+            android:id="@+id/findItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Find Item" />
+
+    </LinearLayout>
 
 </LinearLayout> 
