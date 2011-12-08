@@ -8,7 +8,7 @@
       
 <resources>
     <string name="app_name">SmartFridge App</string>
-    <string name="view_name">Item Information</string>
-    <string name="defaultUPCMessage">Enter UPC</string>
+    <string name="setting_value">Authorize</string>
+    <string name="token_value">Get Token</string>
 </resources>
 

@@ -14,7 +14,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import android.util.Log;
 
 
-public class httpRetriever {
+public class HttpRetriever {
 	
 	public String callWebService(String serviceURL)
 	{

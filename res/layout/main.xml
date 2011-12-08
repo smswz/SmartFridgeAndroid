@@ -3,42 +3,12 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-    
 <TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/textview"
     android:layout_width="fill_parent"
     android:layout_height="241dp"
     android:layout_marginTop="10px"
-    android:text="@string/view_name" />
+    android:text="whatever" />
 
 </LinearLayout>
-<!-- <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
-    
-    <EditText
-    	android:id="@+id/edittext"
-    	android:hint="@string/defaultUPCMessage"
-    	android:inputType="number"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/str" />
-    
-</LinearLayout>-->
-
-<!-- 
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/textview"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent"
-  android:text="@string/upc_text_label"/>
-   -->
 
